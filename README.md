@@ -1,2 +1,2 @@
 # QR-CODE-GENERATOR
-QR Code Generator using flask in python
+QR Code Generator using django in python
