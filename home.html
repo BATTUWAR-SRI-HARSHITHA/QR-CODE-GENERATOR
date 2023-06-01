@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+	<title>qr code</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+</head>
+<body>
+<div class="container">
+	<h1>GENERATE YOUR QR CODE</h1>
+	<form method="post" action="">
+		{% csrf_token%}
+		<div class="user_details">
+			<div class="input_box">
+				<input type="text" name="data" id=entry placeholder="enter here.......">
+			</div>
+		<input type="submit" value="Generate QR code" id = btn>
+		</div>
+	</form>
+		{% if data %}
+		<img src="{{MEDIA_URL}}{%static 'images/test.png' %}" alt = 'no image'>
+		{% else %}
+		<h1> Please enter your data</h1>
+		{% endif %}
+</div>
+
+</body>
+</html>
